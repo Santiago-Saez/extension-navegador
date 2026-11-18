@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enfoque — Configuración</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main>
+    <h1>🧠 Enfoque — sitios y horarios</h1>
+    <p class="sub">Cada regla bloquea un dominio los días y horas que elijas. Subdominios incluidos (ej. <code>youtube.com</code> cubre <code>m.youtube.com</code>).</p>
+
+    <form id="form" class="add">
+      <input id="domain" placeholder="dominio, ej. instagram.com" required pattern="^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Ej. youtube.com" />
+      <input id="start" type="time" value="09:00" required />
+      <span>→</span>
+      <input id="end" type="time" value="18:00" required />
+      <div class="days" id="newDays"></div>
+      <button type="submit">Añadir</button>
+    </form>
+    <p class="hint">Truco: <code>00:00 → 00:00</code> = todo el día. Para noches (ej. 22:00 → 06:00) el rango cruza la medianoche.</p>
+
+    <ul id="list"></ul>
+
+    <section class="danger">
+      <h2>Datos</h2>
+      <p>Pases de gracia usados hoy: <strong id="graceUsed">0</strong>/2 · Intentos hoy: <strong id="attempts">0</strong></p>
+      <button id="resetStats">Borrar estadísticas</button>
+    </section>
+  </main>
+  <script src="../lib/utils.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enfoque</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <h1>🧠 Enfoque</h1>
+    <a href="../options/options.html" target="_blank" title="Configurar">⚙️</a>
+  </header>
+
+  <section class="today">
+    <div><strong id="attemptsToday">0</strong><span>bloqueos hoy</span></div>
+    <div><strong id="graceLeft">2</strong><span>pases gracia</span></div>
+    <div><strong id="rulesCount">0</strong><span>sitios</span></div>
+  </section>
+
+  <p id="graceBanner" class="banner" hidden></p>
+
+  <section>
+    <h2>Últimos 7 días</h2>
+    <canvas id="chart" width="320" height="140"></canvas>
+    <p class="total" id="weekTotal"></p>
+  </section>
+
+  <button id="graceBtn">Usar 5 min de gracia</button>
+  <footer>
+    <a href="../options/options.html" target="_blank">Gestionar horarios →</a>
+  </footer>
+
+  <script src="../lib/utils.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
